@@ -1,0 +1,103 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Franja negra en el título principal */
+h1 {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-radius: 8px;
+}
+
+/* Estilos para los subtítulos */
+h2 {
+    border-bottom: 2px solid #333;
+    color: #444;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 20px;
+}
+
+/* Ajuste de tamaño y estilo de la foto */
+.photo {
+    display: block;
+    margin: 10px auto;
+    width: 150px; /* Ajuste de tamaño */
+    height: 150px;
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo de hover para el enlace de GitHub */
+.github-link {
+    color: #e40e15;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    color: #b30d11;
+    text-decoration: underline;
+}
+
+/* Mejora para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+}
