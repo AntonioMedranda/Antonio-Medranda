@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Datos de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Formulario de Clientes</h1>
+        <form id="clienteForm">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula"><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos"><br>
+
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres"><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo"><br>
+
+            <label for="ciudad">Ciudad:</label>
+        <select id="ciudad" name="ciudad" required>
+            <option value="">Seleccione una ciudad</option>
+            <option value="Quito">Quito</option>
+            <option value="Guayaquil">Guayaquil</option>
+            <option value="Cuenca">Cuenca</option>
+            <option value="Ambato">Ambato</option>
+            <option value="Manta">Manta</option>
+            <option value="Portoviejo">Portoviejo</option>
+            <option value="Machala">Machala</option>
+            <option value="Santo Domingo">Santo Domingo</option>
+            <option value="Riobamba">Riobamba</option>
+            <option value="Loja">Loja</option>
+            <option value="Ibarra">Ibarra</option>
+            <option value="Esmeraldas">Esmeraldas</option>
+            <option value="Latacunga">Latacunga</option>
+            <option value="Quevedo">Quevedo</option>
+            <option value="Babahoyo">Babahoyo</option>
+            <option value="Tulcán">Tulcán</option>
+            <option value="Nueva Loja">Nueva Loja</option>
+            <option value="Chone">Chone</option>
+            <option value="Milagro">Milagro</option>
+            <option value="Azogues">Azogues</option>
+            <option value="Salinas">Salinas</option>
+        </select><br>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

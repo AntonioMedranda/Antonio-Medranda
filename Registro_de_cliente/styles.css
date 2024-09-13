@@ -1,0 +1,88 @@
+/* Estilo general para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('PORTADA-formulario(1).jpg');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Estilo para el contenedor del formulario */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+/* Estilo para el título (h1) del formulario */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    border-bottom: 4px solid #333; /* Línea debajo del título */
+    padding-bottom: 15px; /* Espacio entre el texto y la línea */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; /*negrita*/
+
+
+}
+/* Estilo para los campos de entrada de texto */
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Estilo para el botón de envío */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón cuando se pasa el cursor encima (hover) */
+button:hover {
+    background-color: #444;
+}
+
+
+form input, button {
+    transition: all 0.3s ease;
+}
+
+/*borde sutil al formulario*/
+.form-container {
+    border: 2px solid #0b0b0b;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], select {
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    font-size: 16px; 
+}
+
+
+
+
