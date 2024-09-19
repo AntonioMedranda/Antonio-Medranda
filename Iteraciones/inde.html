@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Matemáticas</title>
+    <style>
+        /* Estilo del cuerpo de la página */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            background-image: url('portada.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Contenedor principal */
+        .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente */
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+            max-width: 450px; 
+            width: 100%;
+            backdrop-filter: blur(10px); /* Efecto de difuminado */
+        }
+
+        /* Estilo del título */
+        h1 {
+            text-align: center; 
+            color: #343a40; 
+            margin-bottom: 25px;
+            font-size: 2rem; 
+            letter-spacing: 1px;
+        }
+        /* Estilo de los campos de entrada */
+        input {
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px;
+            border: 2px solid #ced4da; 
+            border-radius: 10px; 
+            font-size: 1rem; 
+            box-sizing: border-box; 
+            background-color: #f8f9fa;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #007bff; /* Cambia el color del borde cuando se selecciona */
+            outline: none;
+        }
+
+        /* Estilo del botón */
+        button {
+            width: 100%; 
+            padding: 12px; 
+            background: linear-gradient(135deg, #ff5722, #ff9800); /* Degradado de colores */
+            color: white; 
+            border: none; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-3px); /* Efecto de levitar */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        /* Estilo del área de resultados */
+        .result {
+            margin-top: 20px; 
+            padding: 20px;
+            background: linear-gradient(135deg, #e0f7fa, #80deea); /* Degradado en los resultados */
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            font-size: 1.2rem; 
+            color: #00796b; 
+            opacity: 0; /* Inicia invisible */
+            transform: translateY(20px); /* Desplazado para la animación */
+            animation: showResult 0.5s forwards ease-out; /* Animación de entrada */
+        }
+        
+        /* Estilo de los párrafos de resultado */
+        .result p {
+            margin: 0 0 10px; 
+            padding: 10px;
+            background-color: #ffffff; /* Fondo blanco para cada operación */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilo para resaltar los números */
+        .highlight {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        /* Animación para mostrar los resultados de manera atractiva */
+        @keyframes showResult {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Operaciones Matemáticas</h1>
+        <!-- Campos de entrada para los números -->
+        <input type="number" id="num1" placeholder="Ingrese el primer número">
+        <input type="number" id="num2" placeholder="Ingrese el segundo número">
+        <!-- Botón para calcular -->
+        <button onclick="realizarOperaciones()">Calcular</button>
+        <!-- Área para mostrar los resultados -->
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        // Función que se ejecuta al hacer clic en el botón
+        function realizarOperaciones() {
+            const num1 = parseFloat(document.getElementById('num1').value); 
+            const num2 = parseFloat(document.getElementById('num2').value); 
+            let resultado = ""; 
+
+            // Verifica si los números ingresados son válidos
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado = "<p>Por favor, ingrese números válidos.</p>"; 
+            } else {
+                // Realiza las operaciones matemáticas
+                resultado += `<p>1. Suma: <span class="highlight">${num1} + ${num2} = ${num1 + num2}</span></p>`;
+                resultado += `<p>2. Resta: <span class="highlight">${num1} - ${num2} = ${num1 - num2}</span></p>`;
+                resultado += `<p>3. Multiplicación: <span class="highlight">${num1} * ${num2} = ${num1 * num2}</span></p>`;
+                if (num2 !== 0) {
+                    resultado += `<p>4. División: <span class="highlight">${num1} / ${num2} = ${(num1 / num2).toFixed(2)}</span></p>`;
+                } else {
+                    resultado += `<p>4. División: <span class="highlight">No se puede dividir entre cero</span></p>`;
+                }
+                resultado += `<p>5. Módulo: <span class="highlight">${num1} % ${num2} = ${num1 % num2}</span></p>`;
+            }
+
+            // Muestra el resultado en el div con id "resultado"
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
