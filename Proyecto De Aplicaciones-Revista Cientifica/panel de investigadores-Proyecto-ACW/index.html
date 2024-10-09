@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de Investigadores - Revista Científica ULEAM">
+  <title>Panel de Investigadores - Revista Científica ULEAM</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos específicos para el Panel de Investigadores */
+    .main-content {
+      padding: 20px;
+    }
+
+    .form-upload {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background-color: #cb0404;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #555;
+    }
+
+    .status-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #e9ecef;
+      border-radius: 10px;
+    }
+
+    .status-section h3 {
+      margin-bottom: 20px;
+    }
+
+    .status-item {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- División superior con color personalizado -->
+  <div class="top-div"></div>
+
+  <!-- Encabezado con barra de navegación -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo ULEAM">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="panel_autor.html" class="active">Panel de Autor</a></li>
+        <li><a href="cerrar_sesión.html">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal del panel de investigadores -->
+  <main class="main-content">
+    <h2>Panel de Autor</h2>
+
+    <!-- Formulario para cargar artículos -->
+    <div class="form-upload">
+      <h3>Cargar Nuevo Artículo</h3>
+      <form action="upload_article.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="title">Título del Artículo</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="abstract">Resumen</label>
+          <textarea id="abstract" name="abstract" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="authors">Autores (separados por comas)</label>
+          <input type="text" id="authors" name="authors" required>
+        </div>
+        <div class="form-group">
+          <label for="file">Archivo del Artículo (PDF)</label>
+          <input type="file" id="file" name="file" accept=".pdf" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Enviar Artículo</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sección para mostrar el estado de revisión -->
+    <div class="status-section">
+      <h3>Estado de Revisión de Artículos</h3>
+      <div class="status-item">
+        <strong>Título:</strong> Artículo 1 <br>
+        <strong>Estado:</strong> En revisión <br>
+        <strong>Comentarios:</strong> Esperando feedback de los revisores.
+      </div>
+      <div class="status-item">
+        <strong>Título:</strong> Artículo 2 <br>
+        <strong>Estado:</strong> Aceptado <br>
+        <strong>Comentarios:</strong> Listo para publicación.
+      </div>
+      <div class="status-item">
+        <strong>Título:</strong> Artículo 3 <br>
+        <strong>Estado:</strong> Rechazado <br>
+        <strong>Comentarios:</strong> No cumple con los estándares de la revista.
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-info">
+        <p>© 2024 Revista Científica ULEAM. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

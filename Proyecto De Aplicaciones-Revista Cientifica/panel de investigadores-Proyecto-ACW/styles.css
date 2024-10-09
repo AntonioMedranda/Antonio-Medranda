@@ -1,0 +1,81 @@
+/* =========================== */
+/* Estilos generales del layout */
+/* =========================== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.top-div {
+    background-color: #ce2803;
+    height: 60px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 30px 20px;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover, .active {
+    color: #ce2803;
+}
+
+/* =========================== */
+/* Estilos del pie de página */
+/* =========================== */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-info p,
+.social-media a {
+    margin: 5px 0;
+    color: white;
+}
+
+.social-media a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ce2803;
+}

@@ -1,0 +1,364 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Cambiar fuente para mayor elegancia */
+}
+.top-div {
+    background-color: #c20404;
+    height: 60px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0808;
+    padding: 20px 30px; /* Ajustar el padding para más espacio */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar sombra al encabezado */
+}
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 30px; /* Espaciado más amplio entre elementos */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s; /* Agregar transición suave */
+}
+nav ul li a:hover, .active {
+    color: #c70404;
+}
+.panel-revisores {
+    padding: 30px; /* Más padding para un aspecto más espacioso */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* Fondo blanco para contrastar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar la sección */
+    border-radius: 10px; /* Bordes redondeados */
+}
+.panel-revisores h2 {
+    text-align: center;
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #cb0404; /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio debajo del título */
+}
+.panel-revisores p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+.articulos-pendientes {
+    margin-bottom: 40px;
+}
+.articulos-pendientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.articulos-pendientes th, .articulos-pendientes td {
+    padding: 12px; /* Más padding para celdas */
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.articulos-pendientes th {
+    background-color: #f4f4f4;
+    font-weight: bold; /* Negrita para el encabezado */
+}
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Tamaño de botón más grande */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+.btn:hover {
+    background-color: #555;
+}
+.retroalimentacion textarea {
+    width: 100%;
+    padding: 12px; /* Aumentar el padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.historial-revision {
+    margin-top: 30px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px; /* Separación del contenido */
+}
+
+.footer-info p,
+.social-media a {
+    margin: 5px 0;
+    color: white;
+}
+
+.social-media a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ce0303;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #d10606;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    background-color: #d00505;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #d20d03;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+h1, h2 {
+    text-align: center; /* Centrar títulos para mayor elegancia */
+}
+
+.panel-revisores .articulos-pendientes table {
+    border-radius: 10px; /* Bordes redondeados para las tablas */
+    overflow: hidden; /* Para aplicar el redondeo a las esquinas de las celdas */
+}
+
+.articulos-pendientes th, .articulos-pendientes td {
+    transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.articulos-pendientes tr:hover td {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+/* Ajustes de los botones para más consistencia */
+.btn, button {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para los botones */
+}
+
+/* Espaciado mejorado entre párrafos en la retroalimentación */
+.retroalimentacion p {
+    margin-bottom: 15px; /* Aumentar el espaciado */
+    line-height: 1.5; /* Mejorar la legibilidad */
+}
+
+.panel-revisores {
+    padding: 30px; /* Más padding para un aspecto más espacioso */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* Fondo blanco para contrastar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar la sección */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Otros estilos permanecen iguales */
+
+* {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    box-sizing: border-box; /* Asegurarse de que el tamaño incluya el padding y el borde */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente general de la página */
+}
+
+.franja-roja {
+    background-color: #c20404; /* Color rojo de la franja */
+    height: 30px; /* Altura de la franja */
+    width: 100%; /* Asegurarse de que cubra todo el ancho */
+    position: fixed; /* Fijar la franja en la parte superior */
+    top: 0; /* Alineada a la parte superior */
+    left: 0; /* Alineada a la izquierda */
+    z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    background-color: #f9f9f9; /* Fondo claro para contraste */
+}
+
+.franja-roja {
+    background-color: #c20404; /* Color rojo */
+    height: 40px; /* Altura de la franja superior */
+    width: 100%; /* Asegurarse de que cubra todo el ancho */
+    position: absolute; /* Cambiado a posición absoluta */
+    top: 0; /* Alineada a la parte superior */
+    left: 0; /* Alineada a la izquierda */
+    z-index: 10; /* Por encima de otros elementos */
+}
+
+.franja-negra {
+    background-color: #0a0707; /* Color negro */
+    height: 40px; /* Altura de la franja inferior */
+    width: 100%; /* Asegurarse de que cubra todo el ancho */
+    position: fixed; /* Fija en la parte inferior */
+    bottom: 0; /* Alineada a la parte inferior */
+    left: 0; /* Alineada a la izquierda */
+    z-index: 10; /* Por encima de otros elementos */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo */
+    margin: 60px auto; /* Margen automático con espacio superior */
+    padding: 20px; /* Espacio interior */
+    background: white; /* Fondo blanco para contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+h1, h2 {
+    color: #c20404; /* Color rojo para títulos */
+    text-align: center; /* Centrar títulos */
+    margin-bottom: 20px; /* Espacio debajo de títulos */
+}
+
+h2 {
+    margin-top: 30px; /* Espacio encima de subtítulos */
+}
+
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+th, td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea debajo de las celdas */
+}
+
+th {
+    background-color: #0a0808; /* Fondo rojo para encabezados de tabla */
+    color: white; /* Color blanco para texto de encabezados */
+}
+
+
+button {
+    background-color: #c20404; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+    margin-top: 10px; /* Margen superior */
+}
+
+button:hover {
+    background-color: #d20d03; /* Color de fondo al pasar el mouse */
+}
+
+form {
+    margin-top: 20px; /* Margen superior para el formulario */
+}
+
+label {
+    display: block; /* Mostrar etiquetas como bloque */
+    margin: 10px 0 5px; /* Margen alrededor de etiquetas */
+    color: #333; /* Color negro para texto de etiquetas */
+}
+
+textarea {
+    width: 100%; /* Ancho completo */
+    height: 80px; /* Altura */
+    margin-bottom: 10px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde gris */
+    padding: 10px; /* Espaciado interno */
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+.retroalimentacion p {
+    margin-bottom: 15px; /* Aumentar el espaciado */
+    line-height: 1.5; /* Mejorar legibilidad */
+    color: #333; /* Color negro para el texto */
+}
+
+.separator {
+    height: 1px; /* Altura de la línea separadora */
+    background-color: #ddd; /* Color gris */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+

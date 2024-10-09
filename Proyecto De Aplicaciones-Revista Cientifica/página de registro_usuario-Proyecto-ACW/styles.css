@@ -1,0 +1,266 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Asegura que el padding y el border no desborden el tamaño de los elementos */
+}
+/* Franja superior (roja) */
+.top-div {
+  background-color: #ce2803;  /* Color de la franja superior */
+  height: 60px;               /* Altura de la franja */
+  width: 100vw;               /* Asegura que cubra todo el ancho de la ventana */
+  margin: 0;                  /* Elimina cualquier margen */
+  padding: 0;
+}
+header {
+  display: flex;              /* Hace que el logo y la navegación se distribuyan en fila */
+  justify-content: space-between; /* Alinea logo a la izquierda y menú a la derecha */
+  align-items: center;        /* Centra verticalmente los elementos dentro del header */
+  background-color: #070707;     /* Color de fondo oscuro para el encabezado */
+  padding: 20px 20px;         /* Espaciado interno (padding) para que no quede pegado a los bordes */
+  width: 100vw;               /* Asegura que cubra todo el ancho de la ventana */
+  margin: 0;                  /* Elimina cualquier margen */
+  box-sizing: border-box;      /* Asegura que el padding no desborde el ancho */
+}
+/* Estilos del logo */
+.logo img {
+  max-width: 200px;           /* Limita el ancho máximo de la imagen del logo */
+  height: auto;               /* Mantiene las proporciones de la imagen automáticamente */
+}
+
+nav ul {
+  display: flex;              /* Hace que los elementos del menú se muestren en fila */
+  list-style: none;           /* Elimina las viñetas de la lista */
+  margin: 0;                  /* Elimina márgenes del ul */
+}
+
+nav ul li {
+  margin-left: 20px;          /* Añade espacio entre cada elemento del menú */
+}
+
+nav ul li a {
+  color: white;               /* Color blanco para los enlaces del menú */
+  text-decoration: none;      /* Elimina el subrayado de los enlaces */
+  font-size: 1.1em;           /* Aumenta ligeramente el tamaño de la fuente */
+}
+
+/* Estilo cuando pasas el ratón por encima de los enlaces del menú */
+nav ul li a:hover, .active {
+  color: #ce2803;             /* Cambia el color del enlace cuando el ratón pasa por encima o está activo */
+}
+
+/* Contenedor del formulario */
+.form-registro {
+  width: 100%;                /* El formulario ocupa el 100% del ancho disponible */
+  max-width: 600px;           /* El formulario tiene un ancho máximo de 600px para pantallas más grandes */
+  margin: 50px auto;          /* Añade margen arriba/abajo de 50px y lo centra horizontalmente */
+  background-color: #f9f9f9;  /* Fondo claro para el formulario */
+  padding: 30px;              /* Espaciado interno (padding) de 30px para que el contenido no quede pegado */
+  border-radius: 10px;        /* Bordes redondeados de 10px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del formulario para darle profundidad */
+}
+
+
+.form-group {
+  margin-bottom: 15px;        /* Espacio inferior entre cada campo del formulario */
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+.form-group label {
+  display: block;             /* Las etiquetas ocupan toda la fila */
+  font-weight: bold;          /* Las etiquetas tienen un texto en negrita */
+  margin-bottom: 5px;         /* Espaciado inferior entre la etiqueta y el campo */
+}
+
+/* Estilo para los inputs y select */
+.form-group input,
+.form-group select {
+  width: 100%;                /* Los campos ocupan todo el ancho disponible */
+  padding: 10px;              /* Espaciado interno dentro de los campos */
+  border: 1px solid #ccc;     /* Borde gris claro */
+  border-radius: 5px;         /* Bordes redondeados */
+  font-size: 1em;             /* Tamaño de fuente estándar */
+}
+
+/* Estilo del botón de registro */
+.form-group button {
+  width: 100%;                /* El botón ocupa todo el ancho del contenedor */
+  padding: 12px;              /* Espaciado interno dentro del botón */
+  background-color: #333;     /* Color de fondo oscuro para el botón */
+  color: white;               /* Texto en color blanco */
+  border: none;               /* Elimina el borde del botón */
+  border-radius: 5px;         /* Bordes redondeados */
+  cursor: pointer;            /* Cambia el cursor al pasar por encima del botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
+}
+
+/* Estilo cuando se pasa el ratón por encima del botón */
+.form-group button:hover {
+  background-color: #555;     /* Cambia el color de fondo del botón al pasar el ratón */
+}
+
+footer {
+  background-color: #090909;     /* Fondo oscuro para el pie de página */
+  color: white;               /* Texto en color blanco */
+  padding: 20px 0;            /* Espaciado interno en la parte superior e inferior */
+  text-align: center;         /* Centra el texto y los elementos del pie de página */
+}
+
+/* Estilo para los textos del pie de página */
+.footer-info p,
+.social-media a {
+  margin: 5px 0;              /* Añade un margen vertical a los párrafos y enlaces del pie de página */
+  color: white;               /* Color blanco para los textos y enlaces */
+}
+
+/* Estilo específico para el correo y contacto */
+.footer-info a {
+  color: white;               /* Asegúrate de que el color de los enlaces sea blanco */
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-media a {
+  margin-right: 15px;         /* Espacio a la derecha de cada enlace de redes sociales */
+  text-decoration: none;      /* Elimina el subrayado de los enlaces */
+}
+
+/* Cambia el color del enlace de redes sociales cuando se pasa el ratón por encima */
+.social-media a:hover {
+  color: #ce2803;             /* Cambia a un color rojo cuando se pasa el ratón sobre los enlaces de redes sociales */
+}
+
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+/* Formulario de registro */
+.registro {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #555;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+ /* Estilos para el encabezado y párrafo en la sección de registro */
+ .registro h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+}
+
+.registro p {
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos de validación */
+input:invalid {
+border: 2px solid rgb(85, 81, 81);
+}
+
+input:valid {
+border: 2px solid green;
+}
+
+input:focus:invalid {
+outline: none;
+border-color: rgb(93, 90, 90);
+box-shadow: 0 0 5px rgb(78, 77, 77);
+}
+
+input:focus:valid {
+outline: none;
+border-color: green;
+box-shadow: 0 0 5px green;
+}

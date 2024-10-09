@@ -1,0 +1,219 @@
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+/* División superior */
+.top-div {
+  background-color: #e30613; 
+  height: 50px; /* Altura de la división */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Encabezado */
+header {
+  background-color: #140303; /* Color de fondo negro */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura que el contenido se distribuya con espacio entre ellos */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Asegura que el logo esté a la izquierda */
+}
+
+.logo img {
+  width: 300px; /* Tamaño visible del logo */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 15px; /* Espacio entre el logo y el texto */
+}
+
+.titulo {
+  margin-left: auto; /* Mueve el título hacia la derecha */
+  margin-right: 20px; /* Espacio a la derecha del título */
+  font-size: 1.5em; /* Ajusta el tamaño del texto si es necesario */
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section (Banner principal) */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: rgb(205, 5, 5);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  padding: 40px;
+  display: inline-block;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  background-color: #ce2803;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #cf0d07;
+}
+
+/* Ediciones Recientes */
+.ediciones-recientes {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ediciones-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.edicion {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.edicion img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.edicion h3 {
+  margin: 15px 0;
+}
+
+.edicion .btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.edicion .btn:hover {
+  background-color: #444;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bienvenida-text h2 {
+  font-size: 1.5rem; /* Tamaño reducido */
+  margin: 10px 0;
+}
+
+.bienvenida-text p {
+  font-size: 1rem; /* Tamaño reducido */
+}
+
+.bienvenida-text .cta-button {
+  font-size: 0.9rem; /* Tamaño reducido */
+}
+
+/* Noticias Destacadas */
+.noticias-destacadas {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.noticias-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.noticia {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  width: 45%;
+}
+
+.noticia h3 {
+  margin: 10px 0;
+}
+
+.noticia .btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.noticia .btn:hover {
+  background-color: #444;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social-media a {
+  margin: 0 10px;
+}

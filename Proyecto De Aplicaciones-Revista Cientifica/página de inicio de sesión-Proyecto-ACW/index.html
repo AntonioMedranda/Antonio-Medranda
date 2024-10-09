@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicio de Sesión - Revista Científica ULEAM">
+  <title>Inicio de Sesión - Revista Científica ULEAM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- División superior con color personalizado -->
+  <div class="top-div"></div>
+
+  <!-- Encabezado con barra de navegación -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo ULEAM">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal de inicio de sesión -->
+  <main>
+    <section class="login">
+      <h2 class="login-title">Iniciar Sesión</h2>
+      <p class="login-desc">Accede al sistema utilizando tu correo electrónico y contraseña.</p>
+      
+      <form action="login.php" method="POST" class="form-login" onsubmit="return validarFormulario()">
+        <!-- Campo para correo electrónico -->
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <div class="input-container">
+            <i class="icon fas fa-envelope"></i>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <small id="emailError" class="error-message"></small>
+        </div>
+
+        <!-- Campo para contraseña -->
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <div class="input-container">
+            <i class="icon fas fa-lock"></i>
+            <input type="password" id="password" name="password" required minlength="6">
+          </div>
+          <small id="passwordError" class="error-message"></small>
+        </div>
+
+        <!-- Botón de enviar -->
+        <div class="form-group">
+          <button type="submit" class="btn">Iniciar Sesión</button>
+        </div>
+      </form>
+
+      <!-- Información adicional centrada -->
+      <div class="info-adicional">
+        <ul>
+          <li>Acceso a contenido exclusivo según tu rol (Investigador, Revisor, Editor).</li>
+          <li>Revisa los artículos recientes o las ediciones pendientes de publicación.</li>
+          <li>Mantén tu perfil actualizado para recibir notificaciones personalizadas.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-info">
+      <p>© 2024 Revista Científica ULEAM. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script de validación -->
+  <script>
+    function validarFormulario() {
+      let email = document.getElementById('email');
+      let password = document.getElementById('password');
+      let emailError = document.getElementById('emailError');
+      let passwordError = document.getElementById('passwordError');
+      let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      let formularioValido = true;
+
+      // Validar formato de correo electrónico
+      if (!emailValido.test(email.value)) {
+        emailError.textContent = 'Por favor, ingrese un correo electrónico válido.';
+        formularioValido = false;
+      } else {
+        emailError.textContent = '';
+      }
+
+      // Validar longitud de contraseña
+      if (password.value.length < 6) {
+        passwordError.textContent = 'La contraseña debe tener al menos 6 caracteres.';
+        formularioValido = false;
+      } else {
+        passwordError.textContent = '';
+      }
+
+      return formularioValido;
+    }
+  </script>
+</body>
+</html>

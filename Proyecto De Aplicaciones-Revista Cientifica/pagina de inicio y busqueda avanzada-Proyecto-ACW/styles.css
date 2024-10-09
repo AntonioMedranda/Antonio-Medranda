@@ -1,0 +1,374 @@
+/* Estilos CSS para el diseño de la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .top-div {
+      background-color: #ff0000; /* Color personalizado para la parte superior */
+      height: 50px; /* Altura de la división superior */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    header .logo img {
+      max-height: 50px; /* Ajusta la altura del logo */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px; /* Espacio entre elementos de navegación */
+    }
+
+    nav ul li a {
+      color: #fff; /* Color de los enlaces de navegación */
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Estilo para encabezados en rojo */
+    .red-header {
+      color: #ff0000; /* Color rojo */
+    }
+
+    .ediciones-recientes {
+      margin-top: 20px; /* Espacio superior para la sección de ediciones recientes */
+      text-align: center; /* Centrar texto en la sección */
+    }
+
+    .ediciones-container {
+      display: flex; /* Utiliza flexbox para el contenedor de ediciones */
+      flex-wrap: wrap; /* Permite que las ediciones se envuelvan en varias filas */
+      justify-content: center; /* Centrar los elementos */
+      gap: 20px; /* Espacio entre los elementos */
+      max-width: 1200px; /* Ancho máximo para la sección */
+      margin: 0 auto; /* Centrar el contenedor de ediciones */
+    }
+
+    .edicion {
+      border: 1px solid #ccc; /* Bordes para cada edición */
+      padding: 10px; /* Espaciado interno */
+      text-align: center; /* Centrar texto */
+      transition: transform 0.2s; /* Efecto al pasar el mouse */
+      background-color: #fff; /* Fondo blanco para cada edición */
+      border-radius: 5px; /* Bordes redondeados */
+      width: calc(30% - 20px); /* Ancho de cada edición con un margen */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las ediciones */
+    }
+
+    .edicion:hover {
+      transform: scale(1.05); /* Aumentar ligeramente al pasar el mouse */
+    }
+
+    .edicion img {
+      max-width: 100%; /* Asegura que la imagen no exceda el ancho */
+      height: auto; /* Mantiene la proporción de la imagen */
+      border-radius: 5px; /* Bordes redondeados para las imágenes */
+    }
+
+    .busqueda-avanzada {
+      margin-top: 20px; /* Espacio superior para la sección de búsqueda avanzada */
+    }
+
+    .subir-revista {
+      margin-top: 40px; /* Espacio superior para la sección de subir revista */
+      text-align: center; /* Centrar texto en la sección */
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .social-media a {
+      margin: 0 10px; /* Espacio entre iconos de redes sociales */
+      color: white;
+      text-decoration: none;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ce0505;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px; /* Bordes redondeados */
+    }
+
+    /* Estilo para la sección de noticias */
+    .noticias {
+      margin-top: 40px; /* Espacio superior para la sección de noticias */
+    }
+
+    .noticias-container {
+      display: flex; /* Utiliza flexbox para el contenedor de noticias */
+      flex-wrap: wrap; /* Permite que las noticias se envuelvan en varias filas */
+      justify-content: center; /* Centrar los elementos */
+      gap: 20px; /* Espacio entre los elementos */
+    }
+
+    .noticia {
+      border: 1px solid #ccc; /* Bordes para cada noticia */
+      padding: 15px; /* Espaciado interno */
+      text-align: left; /* Alinear texto a la izquierda */
+      background-color: #fff; /* Fondo blanco para cada noticia */
+      border-radius: 5px; /* Bordes redondeados */
+      width: calc(30% - 20px); /* Ancho de cada noticia con un margen */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las noticias */
+    }
+
+    .noticia h3 {
+      margin-top: 0; /* Sin margen superior en el título */
+    }
+
+
+
+
+
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0e0a0a;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+  }
+  
+  /* División superior */
+  .top-div {
+    background-color: #e30613; 
+    height: 50px;
+    width: 100%;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #140303;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .titulo {
+    margin-left: auto;
+    font-size: 1.5em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-size: cover;
+    background-position: center;
+    color: rgb(205, 5, 5);
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    display: inline-block;
+  }
+  
+  .cta-button {
+    background-color: #ce2803;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #cf0d07;
+  }
+  
+  /* Secciones de contenido */
+  .ediciones-recientes, .publicacion, .noticias-destacadas {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .ediciones-container, .noticias-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .edicion, .noticia {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 45%;
+  }
+  
+  .edicion img, .noticia img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .edicion .btn, .noticia .btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .edicion .btn:hover, .noticia .btn:hover {
+    background-color: #444;
+  }
+  
+  /* Formulario de Publicación */
+  .publicacion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .publicacion label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  .publicacion input[type="text"],
+  .publicacion textarea,
+  .publicacion input[type="file"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .publicacion textarea {
+    height: 100px;
+  }
+  
+  footer {
+    background-color: #0a0808;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer .social-media a {
+    margin: 0 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #666;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #555;
+  }
+  

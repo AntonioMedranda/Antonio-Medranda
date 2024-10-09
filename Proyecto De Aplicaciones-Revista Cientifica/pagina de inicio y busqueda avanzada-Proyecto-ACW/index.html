@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revista Científica ULEAM - Publicaciones y artículos científicos.">
+  <title>Revista Científica ULEAM</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos CSS -->
+  <style>
+    /* Estilos CSS para el diseño de la página */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .top-div {
+      background-color: #ff0000; /* Color personalizado para la parte superior */
+      height: 50px; /* Altura de la división superior */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    header .logo img {
+      max-height: 50px; /* Ajusta la altura del logo */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px; /* Espacio entre elementos de navegación */
+    }
+
+    nav ul li a {
+      color: #fff; /* Color de los enlaces de navegación */
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Estilo para encabezados en rojo */
+    .red-header {
+      color: #ff0000; /* Color rojo */
+    }
+
+    .ediciones-recientes {
+      margin-top: 20px; /* Espacio superior para la sección de ediciones recientes */
+      text-align: center; /* Centrar texto en la sección */
+    }
+
+    .ediciones-container {
+      display: flex; /* Utiliza flexbox para el contenedor de ediciones */
+      flex-wrap: wrap; /* Permite que las ediciones se envuelvan en varias filas */
+      justify-content: center; /* Centrar los elementos */
+      gap: 20px; /* Espacio entre los elementos */
+      max-width: 1200px; /* Ancho máximo para la sección */
+      margin: 0 auto; /* Centrar el contenedor de ediciones */
+    }
+
+    .edicion {
+      border: 1px solid #ccc; /* Bordes para cada edición */
+      padding: 10px; /* Espaciado interno */
+      text-align: center; /* Centrar texto */
+      transition: transform 0.2s; /* Efecto al pasar el mouse */
+      background-color: #fff; /* Fondo blanco para cada edición */
+      border-radius: 5px; /* Bordes redondeados */
+      width: calc(30% - 20px); /* Ancho de cada edición con un margen */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las ediciones */
+    }
+
+    .edicion:hover {
+      transform: scale(1.05); /* Aumentar ligeramente al pasar el mouse */
+    }
+
+    .edicion img {
+      max-width: 100%; /* Asegura que la imagen no exceda el ancho */
+      height: auto; /* Mantiene la proporción de la imagen */
+      border-radius: 5px; /* Bordes redondeados para las imágenes */
+    }
+
+    .busqueda-avanzada {
+      margin-top: 20px; /* Espacio superior para la sección de búsqueda avanzada */
+    }
+
+    .subir-revista {
+      margin-top: 40px; /* Espacio superior para la sección de subir revista */
+      text-align: center; /* Centrar texto en la sección */
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .social-media a {
+      margin: 0 10px; /* Espacio entre iconos de redes sociales */
+      color: white;
+      text-decoration: none;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ce0505;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px; /* Bordes redondeados */
+    }
+
+    /* Estilo para la sección de noticias */
+    .noticias {
+      margin-top: 40px; /* Espacio superior para la sección de noticias */
+    }
+
+    .noticias-container {
+      display: flex; /* Utiliza flexbox para el contenedor de noticias */
+      flex-wrap: wrap; /* Permite que las noticias se envuelvan en varias filas */
+      justify-content: center; /* Centrar los elementos */
+      gap: 20px; /* Espacio entre los elementos */
+    }
+
+    .noticia {
+      border: 1px solid #ccc; /* Bordes para cada noticia */
+      padding: 15px; /* Espaciado interno */
+      text-align: left; /* Alinear texto a la izquierda */
+      background-color: #fff; /* Fondo blanco para cada noticia */
+      border-radius: 5px; /* Bordes redondeados */
+      width: calc(30% - 20px); /* Ancho de cada noticia con un margen */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las noticias */
+    }
+
+    .noticia h3 {
+      margin-top: 0; /* Sin margen superior en el título */
+    }
+  </style>
+</head>
+<body>
+  <!-- División superior con color personalizado -->
+  <div class="top-div"></div>
+
+  <!-- Encabezado con barra de navegación -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo ULEAM"> <!-- Agrega aquí la ruta de tu imagen -->
+    </div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="buscaqueda_avanzada.html">Busqueda Avanzada</a></li>
+                <li><a href="subir_archivo.html">Subir Archivo</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Más</a>
+                  <div class="dropdown-content">
+                      <a href="historial.html">Historial</a>
+                      <a href="contacto.html">Contacto</a>
+                <li><a href="cerrar_sesión.html">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal de la página de inicio -->
+  <main>
+    <!-- Sección de búsqueda avanzada -->
+    <section class="busqueda-avanzada">
+      <h2 class="red-header">Búsqueda Avanzada</h2>
+      <form action="buscar.html" method="GET">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Buscar por título">
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" placeholder="Buscar por autor">
+
+        <label for="fecha">Fecha de Publicación:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
+          <option value="">Seleccione una categoría</option>
+          <option value="ciencia">Ciencia</option>
+          <option value="tecnologia">Tecnología</option>
+          <option value="salud">Salud</option>
+          <option value="educacion">Educación</option>
+        </select>
+
+        <button type="submit" class="btn">Buscar</button>
+      </form>
+    </section>
+
+    <!-- Sección de ediciones recientes de la revista -->
+    <section class="ediciones-recientes">
+      <h2 class="red-header">Últimas Ediciones</h2>
+      <div class="ediciones-container">
+        <!-- Ediciones en la primera fila -->
+        <div class="edicion">
+          <img src="revista.jpg" alt="Portada Edición 1">
+          <h3>Edición 1 - Junio 2024</h3>
+          <a href="edicion1.html" class="btn">Leer más</a>
+        </div>
+        <div class="edicion">
+          <img src="revista1.jpg" alt="Portada Edición 2">
+          <h3>Edición 2 - Julio 2024</h3>
+          <a href="edicion2.html" class="btn">Leer más</a>
+        </div>
+        <div class="edicion">
+          <img src="revista2.jpg" alt="Portada Edición 3">
+          <h3>Edición 3 - Agosto 2024</h3>
+          <a href="edicion3.html" class="btn">Leer más</a>
+        </div>
+
+        <!-- Ediciones en la segunda fila -->
+        <div class="edicion">
+          <img src="revista3.jpg" alt="Portada Edición 4">
+          <h3>Edición 4 - Septiembre 2024</h3>
+          <a href="edicion4.html" class="btn">Leer más</a>
+        </div>
+        <div class="edicion">
+          <img src="revista4.jpg" alt="Portada Edición 5">
+          <h3>Edición 5 - Octubre 2024</h3>
+          <a href="edicion5.html" class="btn">Leer más</a>
+        </div>
+        <div class="edicion">
+          <img src="revista5.jpg" alt="Portada Edición 6">
+          <h3>Edición 6 - Noviembre 2024</h3>
+          <a href="edicion6.html" class="btn">Leer más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de noticias -->
+    <section class="noticias">
+      <h2 class="red-header">Noticias Recientes</h2>
+      <div class="noticias-container">
+        <div class="noticia">
+          <h3>Publicación de la Revista</h3>
+          <p>Revista Científica ULEAM es una plataforma dedicada a la publicación de investigaciones originales y revisiones en diversas áreas del conocimiento.</p>
+        </div>
+        <div class="noticia">
+          <h3>Indexación en Bases de Datos</h3>
+          <p>Nuestra revista ha sido indexada en múltiples bases de datos y continúa creciendo en prestigio y visibilidad.</p>
+        </div>
+        <div class="noticia">
+          <h3>Convocatoria de Artículos</h3>
+          <p>Invitamos a investigadores a enviar sus manuscritos para su consideración en nuestras próximas ediciones. La fecha límite para el próximo número es el 30 de noviembre de 2024.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="subir-revista">
+      <h2 class="red-header">Subir Revista</h2>
+      <p>Si eres autor y deseas subir tu revista, haz clic en el siguiente botón:</p>
+      <a href="subir.html" class="cta-button">Subir Revista</a>
+    </div>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-info">
+        <p>© 2024 Revista Científica ULEAM. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

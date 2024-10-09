@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Editores</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Biblioteca de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Franjas superiores -->
+    <div class="top-div"></div>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1 class="editor-title">Panel de Editores</h1>
+        <p class="editor-desc">Gestión completa del proceso editorial</p>
+
+        <!-- Tabla de Artículos Pendientes de Revisión -->
+        <section class="gestion-articulos">
+            <h2>Artículos Pendientes de Revisión</h2>
+            <table class="articles-table">
+                <thead>
+                    <tr>
+                        <th>ID Artículo</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Resumen</th>
+                        <th>Estado</th>
+                        <th>Revisor Asignado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="noRevisados">
+                    <tr>
+                        <td>003</td>
+                        <td>Artículo de Investigación 3</td>
+                        <td>Autor del Artículo 4</td>
+                        <td>Resumen del artículo de investigación 4.</td>
+                        <td>Pendiente</td>
+                        <td></td>
+                        <td><button class="assign-btn" onclick="confirmarAsignacion(this)">Asignar Revisor</button></td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Artículo de Investigación 5</td>
+                        <td>Autor del Artículo 4</td>
+                        <td>Resumen del artículo de investigación 4.</td>
+                        <td>Pendiente</td>
+                        <td></td>
+                        <td><button class="assign-btn" onclick="confirmarAsignacion(this)">Asignar Revisor</button></td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Artículo de Investigación 6</td>
+                        <td>Autor del Artículo 4</td>
+                        <td>Resumen del artículo de investigación 4.</td>
+                        <td>Pendiente</td>
+                        <td></td>
+                        <td><button class="assign-btn" onclick="confirmarAsignacion(this)">Asignar Revisor</button></td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td>Artículo de Investigación 7</td>
+                        <td>Autor del Artículo 4</td>
+                        <td>Resumen del artículo de investigación 4.</td>
+                        <td>Pendiente</td>
+                        <td></td>
+                        <td><button class="assign-btn" onclick="confirmarAsignacion(this)">Asignar Revisor</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tabla de Artículos Listos para Publicación -->
+        <section class="gestion-articulos">
+            <h2>Artículos Listos para Publicación</h2>
+            <table class="articles-table">
+                <thead>
+                    <tr>
+                        <th>ID Artículo</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Resumen</th>
+                        <th>Revisor Asignado</th>
+                        <th>Documento</th>
+                    </tr>
+                </thead>
+                <tbody id="listosParaPublicar">
+                    <tr>
+                        <td>004</td>
+                        <td>Artículo de Investigación 4</td>
+                        <td>Autor del Artículo 4</td>
+                        <td>Resumen del artículo de investigación 4.</td>
+                        <td>Dr. Ana García</td>
+                        <td><a href="articulo4.pdf" download>Descargar PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>Artículo de Investigación 8</td>
+                        <td>Autor del Artículo 8</td>
+                        <td>Resumen del artículo de investigación 8.</td>
+                        <td>Dr. Luis Martínez</td>
+                        <td><a href="articulo8.pdf" download>Descargar PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>Artículo de Investigación 9</td>
+                        <td>Autor del Artículo 9</td>
+                        <td>Resumen del artículo de investigación 9.</td>
+                        <td>Dr. Clara López</td>
+                        <td><a href="articulo9.pdf" download>Descargar PDF</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Publicación de Artículos -->
+        <section class="publicacion-articulos">
+            <h2>Publicación de Artículos</h2>
+            <p>Suba los artículos aprobados y publíquelos en la revista.</p>
+            <input type="file" class="upload-btn" id="fileInput" accept=".pdf" onchange="validarArchivo(this)">
+            <button class="publish-article-btn" onclick="mostrarFormulario()">Editar y Publicar</button>
+        </section>
+
+        <!-- Formulario de Edición -->
+        <div id="formularioEdicion" style="display:none;">
+            <h3>Detalles de la Publicación</h3>
+            <label for="revistaImagen">Imagen de la Revista:</label>
+            <input type="file" id="revistaImagen" accept="image/*"><br>
+            <label for="nombreRevista">Nombre de la Revista:</label>
+            <input type="text" id="nombreRevista"><br>
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor"><br>
+            <label for="fechaPublicacion">Fecha de Publicación:</label>
+            <input type="date" id="fechaPublicacion"><br>
+            <label for="resumenRevista">Resumen de la Revista:</label>
+            <textarea id="resumenRevista"></textarea><br>
+            <button onclick="publicarRevista()">Publicar</button>
+            <button onclick="cerrarFormulario()">Cancelar</button>
+        </div>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div id="confirmacionModal" class="modal">
+        <div class="modal-content">
+            <p>¿Está seguro de asignar al revisor?</p>
+            <label for="revisorSelect">Selecciona un Revisor:</label>
+            <select id="revisorSelect">
+                <option value="Dr. Juan Pérez">Dr. Juan Pérez</option>
+                <option value="Dr. Ana García">Dr. Ana García</option>
+                <option value="Dr. Luis Martínez">Dr. Luis Martínez</option>
+                <option value="Dr. Clara López">Dr. Clara López</option>
+            </select>
+            <br>
+            <button onclick="asignarRevisor()">Enviar Artículo al Revisor</button>
+            <button onclick="cerrarModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Advertencia -->
+    <div id="advertenciaModal" class="modal">
+        <div class="modal-content">
+            <p>Solo se permiten archivos PDF.</p>
+            <button onclick="cerrarAdvertencia()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Franjas inferiores -->
+    <footer>
+        <div class="footer-info">
+            <p>© 2024 Revista Científica ULEAM. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function confirmarAsignacion(button) {
+            document.getElementById('confirmacionModal').style.display = "block";
+        }
+
+        function asignarRevisor() {
+            const revisorSeleccionado = document.getElementById('revisorSelect').value;
+            alert("Revisor " + revisorSeleccionado + " asignado.");
+            cerrarModal();
+        }
+        function cerrarModal() {
+            document.getElementById('confirmacionModal').style.display = "none";
+        }
+        function validarArchivo(input) {
+            const archivo = input.files[0];
+            if (archivo && archivo.type !== "application/pdf") {
+                document.getElementById('advertenciaModal').style.display = "block";
+                input.value = ""; // Limpiar el campo de archivo
+            }
+        }
+        function cerrarAdvertencia() {
+            document.getElementById('advertenciaModal').style.display = "none";
+        }
+        function mostrarFormulario() {
+            document.getElementById('formularioEdicion').style.display = "block";
+        }
+        function cerrarFormulario() {
+            document.getElementById('formularioEdicion').style.display = "none";
+        }
+        function publicarRevista() {
+            alert("Revista publicada exitosamente.");
+            cerrarFormulario();
+        }
+    </script>
+</body>
+</html>
